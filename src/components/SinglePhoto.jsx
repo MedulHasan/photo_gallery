@@ -59,7 +59,7 @@ const SinglePhoto = ({
                     id={`checkbox-${index}`}
                     value={item?.id}
                     checked={selectedItem.includes(item?.id)}
-                    className={`absolute top-5 left-5 h-5 w-5 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity z-10 isCheck`}
+                    className={`absolute top-4 left-4 sm:top-5 sm:left-5 h-4 sm:h-5 w-4 sm:w-5 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity z-10 isCheck`}
                     onChange={handleChange}
                     onMouseEnter={() => setOverCheckbox(true)}
                     onMouseLeave={() => setOverCheckbox(false)}

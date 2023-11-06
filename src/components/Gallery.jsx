@@ -48,7 +48,7 @@ const Gallery = ({ items, setItems, selectedItem, setSelectedItem }) => {
             onDragEnd={handleDragEnd}
         >
             <SortableContext items={items}>
-                <div className="grid grid-cols-5 gap-5 p-10">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 p-10">
                     {items.map((item, index) => (
                         <SinglePhoto
                             key={item?.id}
@@ -61,11 +61,15 @@ const Gallery = ({ items, setItems, selectedItem, setSelectedItem }) => {
                     ))}
                     <div
                         className={`border-[2px] border-iron border-dashed rounded-lg flex flex-col items-center justify-center ${
-                            items.length <= 1 && "h-44 w-44"
-                        }`}
+                            items.length <= 1 && "min-h-40 min-w-40"
+                        } p-5`}
                     >
-                        <img src={blankImage} alt="" className="h-14 w-14" />
-                        <h1 className="text-24 font-semibold mt-5">
+                        <img
+                            src={blankImage}
+                            alt=""
+                            className="h-[20px] w-[20px]"
+                        />
+                        <h1 className="text-[10px] sm:text-[12px] md:text-16 font-semibold mt-3">
                             Add Image
                         </h1>
                     </div>
